@@ -17,7 +17,7 @@ namespace Ödev
             InitializeComponent();
         }
 
-        static int second = 21; // 21 çünkü 21 -- gideceği için 20 den geriye sayacak (20 yapsan 19 dan saymaya başlar :)))
+        static int second = 21; 
         static int sonuc;
         static int puan;
         static string method;
@@ -179,20 +179,19 @@ namespace Ödev
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e) // tick = intval için geçen süre (1.000 = 1 saniye de 1 kez) 100 = 1 milisaniye de 1 kez gibi
+        private void timer1_Tick(object sender, EventArgs e) 
         {
-            if (timer1.Enabled) // timer aktifse
+            if (timer1.Enabled) 
             {
-                second--; // 21 den azaltarak ilerle (timer 1 saniye de 1 oto azaltıcak)
-                lblSecond.Text = Convert.ToString(second); // convert method
-                if (second == 0) // süre biter
+                second--; 
+                lblSecond.Text = Convert.ToString(second); 
+                if (second == 0) 
                 {
-                    timer1.Stop(); // timer dur
-                    lblSecond.Text = "0"; // label text i 0 yap
+                    timer1.Stop(); 
+                    lblSecond.Text = "0"; 
                     puan = 0;
-                    MessageBox.Show("SÜRE BİTTİ!"); // log verdir vb
+                    MessageBox.Show("SÜRE BİTTİ!"); 
                     second = 21;
-                    // EASY PEASY :D
                 }
             }
         }
